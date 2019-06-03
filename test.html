@@ -1,8 +1,120 @@
 <html>
+
 <head>
-    <title>Add-Header : TEST </title>
+    <style>
+      body {
+            /*background-color:rgba(45, 68, 199, 0.4);*/
+            margin: 0;
+            min-width: 250px;
+            grid-template-rows: 20% 80%;
+           }
+
+           .header {
+            display:flex;
+             padding:20px;
+            background-color:rgba(45, 68, 199, 0.4);
+            color:black;
+            justify-content: center;
+            font-family: Georgia;
+            font-size: 3em;
+}
+
+
+      .todos-container{
+
+
+      }
+      ul{
+       display: flex;
+        margin-left:300px;
+        margin-right: 300px;
+        
+        
+        flex-direction: column;
+        
+      }
+
+      ul > li{
+        display: flex;
+        list-style-type: none;
+        font-size: 1em;
+        padding: 10px 0px 10px 0px;
+        background-color:rgba(189, 223, 251, 0.4);
+        
+        transition: 0.2s;
+        position: relative;
+        
+      }
+
+      ul li:hover{
+        color:rgba(45, 68, 199, 0.4);
+        opacity:3;
+      }
+
+      .entertask li{
+        display:flex;
+        /*background-color:rgba(189, 223, 251, 0.4);*/
+        justify-content: center;
+        list-style-type: none;
+        padding-bottom: 2em;
+      }
+   .bottombar{
+     display:flex;
+     flex-direction:row;
+     justify-content:center;
+   }
+
+      
+    </style>
 </head>
+
 <body>
-    <h1>Heading 1</h1>
+    <div class="header">
+        <div>To do list</div>
+    </div>
+    <div class="todos-container">
+        <ul>
+          <div class="entertask">
+            <li>
+                <input type="text" placeholder="What needs to be done?" name="new" />
+            </li>
+          </div> 
+            <li>
+                <input type="checkbox" />
+                Learn GIT
+            </li>
+            <li>
+                <input type="checkbox" />
+                Learn HTML CSS
+            </li>
+            <li>
+                <input type="checkbox" />
+                Learn Flex and Grid
+            </li>
+            <li>
+                <input type="checkbox" />
+                Learn JavaScript Basics
+            </li>
+            <li>
+                <input type="checkbox" />
+                Learn JavaScript DataTypes
+            </li>
+            <li>
+                <input type="checkbox" />
+                Implement
+            </li>
+        </ul>
+        <div class="bottombar">
+          
+          <button>ALL</button>
+          <button>ACTIVE</button>
+          <button>COMPLETED</button>
+          <button>CLEAR COMPLETED</button>
+                  
+        </div>
+
+      </div>  
+
 </body>
+
 </html>
