@@ -44,11 +44,7 @@ body {
 	padding: 6px;
 	
 }
-.todo-container input::input-placeholder {
-	font-style: italic;
-	font-weight: 300;
-    color: #e6e6e6;
-}
+
 .footer{
     display: flex;
     justify-content: space-between;
@@ -84,7 +80,7 @@ label:before {
 }
 
 
-.todo-list li .toggle {
+.todo-list li .checkbox-toggle {
 	text-align: center;
 	width: 40px;
 	position: relative;
@@ -120,7 +116,7 @@ label:before {
 	
 	line-height: 1.4em;
 	border: 0;
-	color: rgb(102, 100, 100);
+	color: rgba(102, 100, 100,0.2);
 	padding: 9px;
 }
 .clear-completed-task:hover{
