@@ -37,7 +37,7 @@ body {
 	margin: 0;
 	width: 100%;
 	font-size: 25px;
-	font-family: inherit;
+	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
 	border: 0;
 	color: rgb(102, 100, 100);
@@ -65,7 +65,7 @@ body {
 
 
 .todo-list li.completed label {
-	color: #d9d9d9;
+	color: #837d7d;
 	text-decoration: line-through;
 }
 
@@ -97,14 +97,23 @@ label:before {
 	 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-
 .fa-check-circle{
     color:green;
    font-size: 24px;
    line-height: 1.2;
    padding:0;
    margin:3px;
+   visibility:none;
   
+}
+
+.fa-circle{
+    color:grey;
+    font-size:24px;
+    line-height: 1.2;
+    padding:0;
+    margin:3px;
+    ;
 }
 
 .fa-chevron-down{
@@ -143,13 +152,12 @@ li{
 	top: 0;
 	right: 10px;
 	bottom: -11px;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	margin: auto 0;
-	font-size: 24px;
+	font-size: 22px;
 	color: #cc9a9a;
-	margin-bottom: 11px;
-	transition: color 0.2s ease-out;
+	margin-bottom: 14px;
 }
 .new-task{
     display:flex;
@@ -164,15 +172,21 @@ li{
 }
 
 .todo-list li .remove:hover {
-	color: #af5b5e;
+    color: #af5b5e;
+    
 }
 
 .todo-list li .remove:after {
-	content: 'x';
+    position: relative;
+    top:-7px;
+    bottom:0px;
+    right:5px;
+    content: 'x'; 
+  
 }
 .todo-list li {
 	position: relative;
-	font-size: 24px;
+	font-size: 22px;
 	border-bottom: 1px solid #ededed;
 }
 .footer {
@@ -186,7 +200,7 @@ li{
     line-height: 20px;
 }
 
-/*.footer:before {
+.footer:after {
 	content: '';
 	position: absolute;
 	right: 0;
@@ -199,4 +213,4 @@ li{
     0 9px 1px -3px rgba(0, 0, 0, 0.2),0 16px 0 -6px #f6f6f6,
     0 17px 2px -6px rgba(0, 0, 0, 0.2);
 	            
-}*/
+}

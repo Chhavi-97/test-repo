@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="test.css"/>
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="/home/chhavisharma/Desktop/interns/git101/text.js"></script>
   </head>
   <body>
     <div class="ToDoListMain">
@@ -15,19 +16,19 @@
       <div class="todo-container">
         <div class="new-task">
             <i class="fas fa-chevron-down"></i>
-            <input class="enter-new-task"  type="text" placeholder="What needs to be done?" />
+            <input id="enter-task" class="enter-new-task"  type="text" placeholder="What needs to be done?" />
         </div>
         <div class="">
           <ul class="todo-list">
             <li>
-                <i class="far fa-check-circle"></i>
+                <i onclick="checkboxtoggle(this)" class="far fa-check-circle"></i>
                 <input class="checkbox-toggle"type="checkbox" hidden  >
-                <label></label>
+                <label>Wake Up</label>
                 <button class="remove"></button>
 
             </li>
             <li class="completed">
-              <i class="far fa-check-circle"></i>
+                <i onclick="checkboxtoggle(this)" class="far fa-check-circle"></i>
               <input class="checkbox-toggle" type="checkbox" hidden >
               <label>Go Shopping</label>
               <button class="remove"></button>
@@ -48,7 +49,12 @@
       </div>
       
     </div>
-   
+
+    <script>
+        function checkboxtoggle(x) {
+          x.classList.toggle("fa-circle");
+        }
+        </script>
     
   </body>
 </html>
