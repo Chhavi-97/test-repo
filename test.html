@@ -1,12 +1,13 @@
 <html>
   <head>
+      <meta charset="UTF-8">
     <title>
      ToDoList
     </title>
     <link rel="stylesheet" type="text/css" href="test.css"/>
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="/home/chhavisharma/Desktop/interns/git101/text.js"></script>
+   
   </head>
   <body>
     <div class="ToDoListMain">
@@ -19,42 +20,37 @@
             <input id="enter-task" class="enter-new-task"  type="text" placeholder="What needs to be done?" />
         </div>
         <div class="">
-          <ul class="todo-list">
-            <li>
+          <ul class="todo-list" id="todo-list-task">
+            <!-- <li>
                 <i onclick="checkboxtoggle(this)" class="far fa-check-circle"></i>
-                <input class="checkbox-toggle"type="checkbox" hidden  >
-                <label>Wake Up</label>
+                <input id="check-checkbox" class="checkbox-toggle"type="checkbox" hidden  >
+                <label></label>
                 <button class="remove"></button>
 
             </li>
             <li class="completed">
                 <i onclick="checkboxtoggle(this)" class="far fa-check-circle"></i>
-              <input class="checkbox-toggle" type="checkbox" hidden >
+
+              <input id="check-checkbox" class="checkbox-toggle" type="checkbox" hidden >
               <label>Go Shopping</label>
               <button class="remove"></button>
 
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="footer">
           <span class="remaining-task"> x item(s) left</span>
           <div class="select-filter">
-            <button class="selected">All</button>
-            <button class="active">Active</button>
-            <button class="completed">Completed</button>
+            <button onclick='getTodos()' id="display-all-task" class="selected">All</button>
+            <button onclick='getTodos(false)' id="display-active-task" class="active">Active</button>
+            <button onclick='getTodos(true)' id="display-completed-task" class="completed">Completed</button>
           </div>
-          <button class="clear-completed-task">Clear Completed</button>
+          <button id="clear-completed" class="clear-completed-task">Clear Completed</button>
         </div>
         
       </div>
       
     </div>
-
-    <script>
-        function checkboxtoggle(x) {
-          x.classList.toggle("fa-circle");
-        }
-        </script>
-    
+    <script src="test.js"></script>
   </body>
 </html>
